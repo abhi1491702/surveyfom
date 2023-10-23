@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Survey Form</h2>
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="first-time">Is this your first time using our product and services?</label>
+                <div class="radio-group">
+                    <input type="radio" id="first-time-yes" name="first-time" value="yes"> Yes
+                    <input type="radio" id="first-time-no" name="first-time" value="no"> No
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="suggest-friend">Would you suggest our product and services to your friend and colleague?</label>
+                <div class="radio-group">
+                    <input type="radio" id="suggest-friend-yes" name="suggest-friend" value="yes"> Yes
+                    <input type="radio" id="suggest-friend-no" name="suggest-friend" value="no"> No
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="satisfaction">How satisfied are you with our company overall?</label>
+                <div class="radio-group">
+                    <input type="radio" id="satisfaction-satisfied" name="satisfaction" value="satisfied"> Satisfied
+                    <input type="radio" id="satisfaction-unsatisfied" name="satisfaction" value="unsatisfied"> Unsatisfied
+                    <input type="radio" id="satisfaction-undecided" name="satisfaction" value="undecided"> Undecided
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="suggestion">Do you have any suggestions to improve our service?</label>
+            </div>
+            <div class="form-group">
+                <textarea id="suggestion" name="suggestion" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit-button">Submit</button>
+                <button type="reset" id="reset-button">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2>Survey Form Submission</h2>
+            <div id="submitted-data"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
